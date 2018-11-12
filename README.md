@@ -1,2 +1,3 @@
-# js-bits
+# JavaScript Bits
+
 JavaScript code.
