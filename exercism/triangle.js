@@ -6,14 +6,11 @@ export default class Triangle {
   kind() {
     if (this.a <= 0) {
       throw new Error('sides must be positive integers.');
-    }
-    if (this.a === this.b && this.b === this.c) {
+    } else if (this.a === this.b && this.b === this.c) {
       return 'equilateral';
-    }
-    if (this.b === this.c) {
+    } else if (this.b === this.c) {
       return 'isosceles';
-    }
-    if (this.c < this.a + this.b) {
+    } else if (this.c < this.a + this.b) {
       return 'scalene';
     }
     throw new Error('violation of triangle inequality.');
