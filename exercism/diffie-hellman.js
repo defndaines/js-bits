@@ -1,5 +1,5 @@
 const isPrime = (n) => {
-  Array.from({ length: n / 2 }, (_, i) => i + 2)
+  Array.from({ length: Math.sqrt(n) }, (_, i) => i + 2)
     .forEach((x) => {
       if (n % x === 0) {
         throw new Error(`${n} is not prime. Divisible by ${x}.`);
