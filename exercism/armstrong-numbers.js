@@ -1,5 +1,5 @@
+const reducer = (acc, e, _, src) => acc + (Number(e) ** src.length);
+
 export function validate(n) {
-  const asString = String(n);
-  const len = asString.length;
-  return n === [...asString].reduce((acc, e) => acc + (Number(e) ** len), 0);
+  return n === [...String(n)].reduce(reducer, 0);
 }
