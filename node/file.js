@@ -38,3 +38,45 @@ try {
 } catch (err) {
   console.error(err);
 }
+
+fs.readFile('/Users/daines/unicorn', (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(data);
+});
+
+try {
+  const data = fs.readFileSync('/Users/daines/unicorn', 'utf8');
+  console.log(data);
+} catch (err) {
+  console.error(err);
+}
+
+const content = 'Ta-da!';
+
+fs.writeFile('/tmp/ta-da.txt', content, (err) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  // Successfully written.
+});
+
+try {
+  const data = fs.writeFileSync('/tmp/ta-da.txt', content);
+  // success
+} catch (err) {
+  console.error(err);
+}
+
+fs.writeFile('/tmp/ta-da.txt', "\nI wasn't done!\n", { flag: 'a+' }, (err) => {});
+
+fs.appendFile('/tmp/ta-da.txt', "This is the end.\n", (err) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  // all done.
+});
