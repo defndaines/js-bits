@@ -22,7 +22,7 @@ fs.stat('/Users/daines/unicorn', (err, stats) => {
 
 try {
   // const stats = fs.stat('/Users/daines/unicorn');
-/* 
+/*
   TypeError [ERR_INVALID_CALLBACK]: Callback must be a function
     at makeStatsCallback (fs.js:157:11)
     at Object.stat (fs.js:842:14)
